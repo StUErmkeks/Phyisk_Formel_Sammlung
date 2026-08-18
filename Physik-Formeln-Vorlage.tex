@@ -1,0 +1,214 @@
+\documentclass{article}
+\usepackage[a4paper, margin=2cm]{geometry} 
+\usepackage[T1]{fontenc} %lädt Deutsche schriftzeichen
+\usepackage{amssymb}%für Mathe
+\usepackage{setspace} %für Zeilen Abstand 
+\usepackage[none]{hyphenat} % Silbentrennung deaktivieren 
+\usepackage{fancyhdr}%Kopf und Fußzeile: https://de.overleaf.com/learn/latex/Headers_and_footers
+\usepackage{graphicx}%Zum Bilder einfügen
+\usepackage{xcolor}
+\usepackage{wrapfig}    
+\usepackage[ddmmyyyy]{datetime}%zum bearbeiten vom Datungs Format
+\usepackage{eurosym}%für \Euro / \euro
+\usepackage{hyperref}
+
+
+
+\newcommand{\Thema}{Formelsammlung}
+\newcommand{\Fach}{Physik}
+\newcommand{\Zeilenabstand}{1.2}
+\newcommand{\Inhaltsverzeichnisname}{Inhaltsverzeichnis}
+
+\newcommand{\absatz}{5mm}
+\newcommand{\Blocksatz}{\justifying}
+\newcommand{\strich}{\vspace{\absatz}\hrule\vspace{\absatz}}
+
+
+
+\title{\Thema}
+\author{Niklas Hainz}
+\date{\today}
+
+\setlength{\parindent}{0cm} %deaktiviert die Automatische Einrückung am Anfang des Dokumentes 
+\renewcommand{\contentsname}{\Inhaltsverzeichnisname}
+
+
+
+
+
+
+
+\begin{document}
+    \begin{spacing}{\Zeilenabstand}
+        \maketitle
+        \begin{center}
+            \vspace{-5mm}
+            Fach: \Fach
+        \end{center}
+
+
+
+
+        \newpage
+
+        \pagestyle{fancy}
+        \fancyhead[HL]{Niklas Hainz}
+        \fancyhead[HC]{\Thema / Fach: \Fach}
+        \fancyhead[HR]{\today}
+
+        \tableofcontents
+        \newpage
+
+        \section{SI-Basisgrößen und -einheiten}
+
+
+            \begin{center}
+                \begin{table}[h]
+                    \begin{tabular}{|l|l|l|l|}
+                        \multicolumn{2}{l}{\textbf{Basisgröße}}     & \multicolumn{2}{l}{\textbf{Basiseinheit}} \\
+                        \hline
+                        \textbf{Name}           & \textbf{Symbol}   & \textbf{Name}      & \textbf{Symbol}      \\
+                        \hline
+                        Zeit                    & t                 & Sekunde            & s                    \\
+                        \hline
+                        Länge                   & l                 & Meter              & m                    \\
+                        \hline
+                        Masse                   & m                 & Kilogramm          & kg                   \\
+                        \hline
+                        elektrische Stromstärke & I                 & Ampere             & A                    \\
+                        \hline
+                        Temperatur              & T                 & Kelvin             & K                    \\
+                        \hline
+                        Stoffmenge              & n                 & Mol                & mol                  \\
+                        \hline
+                        Lichtstärke             & I\textsubscript{v}& Candela            & cd                   \\
+                        \hline
+                    \end{tabular}
+                \end{table}
+            \end{center}
+
+
+        \section{Mechanik}
+            \subsection{Gleichförmige Bewegung}  
+                Formel für Gleichförmige Bewegungen, diese Werden benutz wenn die Geschwindigkeit(\(v\)) \textbf{konstant} ist bzw. 
+                wenn keine beschleunigung in der Bewegung vorhanden ist.  
+
+                \begin{equation}
+                    s=v\cdot t
+                \end{equation}
+
+            \subsection{Gleichmäßig beschleunigte Bewegung}
+                Wird genuzt wenn die Beschleunigung(\(a\)) von der Bewegung konstant ist 
+
+                \begin{equation}
+                    s=\frac{1}{2}\cdot a \cdot t^2
+                \end{equation}
+
+                \begin{equation}
+                    s=\frac{1}{2}\cdot v \cdot t 
+                \end{equation}
+
+            \subsection{Kräfte}
+
+            \subsubsection{Kräfte Berechnung}
+
+            Um die Kraft in Newton(N) zu berrechnen
+            \begin{equation}
+                F=m\cdot a
+            \end{equation}
+
+            \subsubsection{Defintion Newton}
+
+            Die Definition von der Einheit Newton(\(N\)) ist:
+
+            \begin{equation}
+                N=kg\cdot \frac{m}{s^{2}}
+            \end{equation}
+
+            \subsection{Schiefe Ebene}
+
+
+
+
+            \newpage
+            \subsection{Arbeit, Energie, Leisung}
+
+            \subsubsection{Einheiten}
+
+            Arbeit W (Work)
+
+            Energie E (Energie) \hfil [W] (Watt) = [E] = J (Joule) = Ws (Wattsekunde) = Nm (Newtonmeter)
+
+            Leisung $P=\frac{W}{T}$  
+
+            [P] = w $\Rightarrow$ "W" als \textbf{Einheit} ist watt. Als formelzeichen Work 
+
+            \subsubsection{Formeln}
+
+            \begin{center}
+            \begin{tabular}{|l | l| l |}
+                \hline
+                 & Mechanische Arbeit & $W=F\cdot s$ \\
+                \hline
+                Arbeit W  & Hubarbeit & $W_H=mgh$ \\
+                \hline
+                & beschleunigungsarbeit & $W_B=mas$  \\
+                \hline
+            \end{tabular}
+
+            \strich
+
+            \begin{tabular}{|l| l| l|}
+                \hline
+                & Lageenergie & $E_{pot}=mgh$ \\
+                \hline
+                Energie E & Bewegungsenergie & $E_{kin} = \frac{1}{2}mv^2 $\\
+                \hline
+                & Elektrische Energie & $E_{el}=PT=UIT$\\
+                \hline
+            \end{tabular}
+
+            \strich
+
+            \begin{tabular}{|l| l| l|}
+                \hline
+                & Mechanische Leistung & $P_{mesch}=\frac{Fs}{t}$\\
+                \hline
+                Leistung $P=\frac{W}{t}$ & Elektrische Leistung & $P_{el}=UI$ \\
+                \hline
+
+            \end{tabular}
+
+            \end{center}
+
+
+            \subsection{Wirkungsgrad}
+
+            Um den Wirkungsgrad zu berrechnen:
+            \begin{equation}
+                \eta_{ges} = \eta_1 \cdot \eta_2 \ldots
+            \end{equation}
+
+
+
+            \subsection{Wagerrechter Wurf}
+
+            \url{https://www.leifiphysik.de/mechanik/waagerechter-und-schraeger-wurf/grundwissen/waagerechter-wurf}
+
+
+            \subsection{Schräger Wurf}
+
+            \url{https://www.leifiphysik.de/mechanik/waagerechter-und-schraeger-wurf/grundwissen/schraeger-wurf-nach-oben-mit-anfangshoehew}
+
+
+
+
+
+
+
+
+
+
+
+    \end{spacing}
+\end{document}
