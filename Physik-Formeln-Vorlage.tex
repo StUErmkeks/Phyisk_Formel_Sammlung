@@ -24,6 +24,15 @@
 \newcommand{\strich}{\vspace{\absatz}\hrule\vspace{\absatz}}
 
 
+%For subsubsub... sections
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\makeatletter
+\newcommand\subsubsubsection{\@startsection{paragraph}{4}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\newcommand\subsubsubsubsection{\@startsection{subparagraph}{5}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\makeatother
+
 
 \title{\Thema}
 \author{Niklas Hainz}
@@ -223,8 +232,24 @@
 
                     \url{https://www.leifiphysik.de/elektrizitaetslehre/ladungen-elektrisches-feld/grundwissen/homogenes-elektrisches-feld}
 
+				\subsubsection{Kondensator \& Kapazität, Homogenes Feld}
 
-
+					\begin{equation}
+						C = \frac{Q}{U} = \epsilon_{0}  \cdot \epsilon_{r} \frac{A}{d}
+					\end{equation}
+					% Formel für die kapazität C im bezug auf den Plattenkondensator
+					\begin{equation}
+						E = \frac{U}{d}
+					\end{equation}
+					\hspace{15mm} El. Energie
+					\begin{equation}
+						W_{el} = \frac{1}{2} \cdot C \cdot U^2
+					\end{equation}
+					\hspace{15mm} El. Feld
+					\begin{equation}
+						E = \frac{\frac{Q}{C}}{d} = \frac{Q}{Cd}
+					\end{equation}
+					
 
 
 
